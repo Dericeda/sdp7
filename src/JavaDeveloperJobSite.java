@@ -36,4 +36,9 @@ public class JavaDeveloperJobSite implements IObserved{
         return this.vacancies;
     }
 
+    public List<IObserver> getSubscribers() {
+        return this.subscribers;
+    }
+
+
 }

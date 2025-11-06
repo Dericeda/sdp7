@@ -7,13 +7,13 @@ public class Subscriber implements IObserver{
         this.name = name;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public void handleEvent(List<String> vacancies){
         System.out.println("Dear "+ name);
         System.out.println("We have some changes in vacancies" +"\n"+vacancies);
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
