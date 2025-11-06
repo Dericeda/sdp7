@@ -1,10 +1,14 @@
 import java.util.List;
 
 public class Subscriber implements IObserver{
-    String name;
+    private String name;
 
     public Subscriber(String name){
         this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     @Override

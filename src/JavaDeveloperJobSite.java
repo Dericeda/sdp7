@@ -2,9 +2,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class JavaDeveloperJobSite implements IObserved{
-    List<String> vacancies = new ArrayList<>();
-
-    List<IObserver> subscribers = new ArrayList<>();
+    private List<String> vacancies = new ArrayList<>();
+    private List<IObserver> subscribers = new ArrayList<>();
 
     public void addVacancy(String vacancy){
          this.vacancies.add(vacancy);
@@ -32,4 +31,9 @@ public class JavaDeveloperJobSite implements IObserved{
             observer.handleEvent(this.vacancies);
         }
     };
+
+    public List<String> getVacancies() {
+        return this.vacancies;
+    }
+
 }
